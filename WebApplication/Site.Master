@@ -14,6 +14,13 @@
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="Content/Site.css" rel="stylesheet" />
+     <link href="Content/style.css" rel="stylesheet/css" />
+<style>
+.navbar {
+    background-color: #8AA989;
+}
+</style>
 
 </head>
 <body>
@@ -38,7 +45,7 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #8AA989;">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -46,25 +53,42 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
+                    <a class="navbar-brand" runat="server" href="~/" style="font-family:'Century Schoolbook';color:white;font-size:35px;">Beyond Library</a>
                 </div>
-                <div class="navbar-collapse collapse">
+                <div class="navbar-collapse collapse" style="float:right;font-size:18px; color:white;">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                        <li><a runat="server" href="~/" style="color:white;">Home</a></li>
+                       
+                    
+                       
+                        <li><a runat="server" href="~/Contact" style="color:white;">Event</a></li>
+                         <li><a runat="server" href="~/Contact " style="color:white;">Books</a></li>
+                        <li><a runat="server" href="~/" style="color:white;">My Account</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+               
+                </asp:ContentPlaceHolder>
+          
+            <footer style="background-color:burlywood;text-decoration: none;">
+                
+                    
+                <div style="text-align:center;">
+                <asp:HyperLink ID="HyperLink1" runat="server">About Us</asp:HyperLink>
+&nbsp;|
+                <asp:HyperLink ID="HyperLink2" runat="server">Categories</asp:HyperLink>
+&nbsp;|
+                <asp:HyperLink ID="HyperLink3" runat="server">Member Login</asp:HyperLink>
+                <br />
+                
+                 </div>  
+                <br />
+                <p style="text-align:center;">&copy; <%: DateTime.Now.Year %> - Beyond Library Malaysia. All Right Reserved.</p>
             </footer>
-        </div>
+        
 
     </form>
 </body>
